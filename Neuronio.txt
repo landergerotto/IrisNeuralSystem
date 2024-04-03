@@ -1,0 +1,8 @@
+    → →
+s = X.w + b
+
+a saida eh sempre algo relacionado a essa funcao.
+
+mts vezes ela toda eh usada como o X da funcao de prosicao
+
+
