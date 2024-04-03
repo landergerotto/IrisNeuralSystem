@@ -1,0 +1,8 @@
+DROPOOUT
+
+durante 1 ou mais epocas(ciclos) voce remove de alguma ou algumas camadas 
+alguns neuronios para reduzir overfitting 
+(dxa o algo mais fraco para ele ficar mais generico)
+
+EARLY STOPPING
+Ao obter um determinado resultado, ou nao melhorar apos N epocas, ele para :)

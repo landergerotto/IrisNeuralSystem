@@ -27,6 +27,7 @@ class NeuralNet:
             for wj, bj in zip(w, b):
                 # print('wj:', wj)
                 # print('y:', y)
+                # print(type(np.dot(wj, y)))
                 neuronExit = self.sigmoid(np.add(np.dot(wj, y), bj))
                 output.append(neuronExit)  
             y = output # passando pra próxima layer
@@ -90,8 +91,8 @@ class NeuralNet:
             dB = 0
             yj = self.sigmoid(sum([wj * xj for wj, xj in zip(w[j], x)]) + b[j])
             for lastDevs in helper:
-                dB += helper[j] * yj
-                # dB += lastDevs * yj
+                # dB += helper[j] * yj
+                dB += lastDevs * yj
             b[j] -= 0.25 * dB
             for i in range(len(w[j])):
                 w[j][i] -= 0.25 * dB * w[j][i] * x[i]
@@ -111,6 +112,6 @@ print(X_test[1])
 print(Y_test[1])
 print(model.predict(X_test[1]))
 
-# print(scores)
-# plt.plot(scores)
-# plt.show()
+print(scores)
+plt.plot(scores)
+plt.show()
